@@ -10,6 +10,7 @@ import React from "react"
  */
 const LocalizedClientLink = ({
   children,
+  removeCountryCode,
   href,
   ...props
 }: {
@@ -21,7 +22,13 @@ const LocalizedClientLink = ({
   [x: string]: any
 }) => {
   const { countryCode } = useParams()
-
+  if (removeCountryCode) {
+    return (
+      <Link href={`${href}`} {...props}>
+        {children}
+      </Link>
+    )
+  }
   return (
     <Link href={`/${countryCode}${href}`} {...props}>
       {children}
