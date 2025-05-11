@@ -11,8 +11,10 @@ async function logger(
   next: MedusaNextFunction
 ) {
   console.log("Request received");
+  console.log("------------");
   next();
 }
+
 
 export default defineMiddlewares({
   routes: [
@@ -30,6 +32,18 @@ export default defineMiddlewares({
     },
     {
       matcher: "/app/login",
+      middlewares: [logger],
+    },
+    {
+      matcher: "/app/entry.jsx",
+      middlewares: [logger],
+    },
+    {
+      matcher: "/store/products",
+      middlewares: [logger],
+    },
+    {
+      matcher: "/store/custom",
       middlewares: [logger],
     },
 
