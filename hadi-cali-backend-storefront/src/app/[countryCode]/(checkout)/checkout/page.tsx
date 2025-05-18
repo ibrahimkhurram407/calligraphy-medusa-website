@@ -3,6 +3,7 @@ import { retrieveCustomer } from "@lib/data/customer"
 import PaymentWrapper from "@modules/checkout/components/payment-wrapper"
 import CheckoutForm from "@modules/checkout/templates/checkout-form"
 import CheckoutSummary from "@modules/checkout/templates/checkout-summary"
+import EmailVerificationPage from "@modules/account/components/email_verification"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
@@ -21,10 +22,20 @@ export default async function Checkout() {
 
   return (
     <div className="grid grid-cols-1 small:grid-cols-[1fr_416px] content-container gap-x-40 py-12">
-      <PaymentWrapper cart={cart}>
-        <CheckoutForm cart={cart} customer={customer} />
-      </PaymentWrapper>
+      {customer && customer.metadata?.email_verified ? (
+        <PaymentWrapper cart={cart}>
+          <CheckoutForm cart={cart} customer={customer} />
+        </PaymentWrapper>
+      ) : customer ? (
+        <EmailVerificationPage customer={customer} />
+      ) : (
+        <div className="text-red-500">
+          Failed to load customer data. Please refresh the page or try logging in again.
+        </div>
+      )}
+
       <CheckoutSummary cart={cart} />
     </div>
+
   )
 }

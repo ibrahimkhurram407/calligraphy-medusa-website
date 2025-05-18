@@ -3,6 +3,14 @@ import { loadEnv, defineConfig } from '@medusajs/framework/utils'
 loadEnv(process.env.NODE_ENV || 'development', process.cwd())
 
 module.exports = defineConfig({
+   modules: [
+    {
+      resolve: "@medusajs/customer",
+      options: {
+      },
+    },
+  ],
+
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
