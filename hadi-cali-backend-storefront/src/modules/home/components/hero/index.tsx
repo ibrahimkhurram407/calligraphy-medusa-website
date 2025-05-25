@@ -1,33 +1,37 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+'use client'
+
+import Image from "next/image"
+import { Button, Heading, Text } from "@medusajs/ui"
+import Link from "next/link"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
-          <Heading
-            level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
-          >
+    <div className="w-full border-b border-ui-border-base bg-ui-bg-subtle">
+      <div className="grid grid-cols-1 small:grid-cols-2 items-center min-h-[75vh] content-container gap-10 py-12">
+        {/* Left: Text Section */}
+        <div className="flex flex-col gap-6">
+          <Heading level="h1" className="text-4xl font-semibold text-ui-fg-base">
             Tahreer
           </Heading>
-          <Heading
-            level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
-          >
-            Discover handcrafted pieces rooted in tradition and beauty
-          </Heading>
-        </span>
-        {/* <a
-          href="https://github.com/medusajs/nextjs-starter-medusa"
-          target="_blank"
-        >
-          <Button variant="secondary">
-            View on GitHub
-            <Github />
-          </Button>
-        </a> */}
+          <Text className="text-lg text-ui-fg-subtle leading-relaxed">
+            Discover handcrafted Islamic calligraphy rooted in tradition and beauty.
+            Each piece is a timeless expression of spiritual artistry.
+          </Text>
+          <Link href="/store">
+            <Button size="large">Explore Store</Button>
+          </Link>
+        </div>
+
+        {/* Right: Image */}
+        <div className="relative w-full h-[300px] small:h-[400px]">
+          <Image
+            src="/images/hero-section.png"
+            alt="Islamic Calligraphy Frames"
+            fill
+            className="object-contain rounded-md shadow-lg"
+            priority
+          />
+        </div>
       </div>
     </div>
   )
