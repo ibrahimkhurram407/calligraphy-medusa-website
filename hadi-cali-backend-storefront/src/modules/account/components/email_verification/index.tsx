@@ -27,7 +27,7 @@ const EmailVerificationPage: React.FC<customUpdateProps> = ({
     }
 
     try {
-      const res = await fetch(`${BACKEND_URL}/store/verify-otp`, {
+      const res = await fetch(`${BACKEND_URL}/store/customer/verify-otp`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

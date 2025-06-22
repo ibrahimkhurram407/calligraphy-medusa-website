@@ -25,17 +25,11 @@ export default async function Nav() {
               className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
               data-testid="nav-store-link"
             >
-              <LocalizedClientLink
-                href="/"
-                className="hover:text-ui-fg-base uppercase"
-                data-testid="nav-store-link"
-              >
                 <img
                   src="/icons/tahreer.png"
                   alt="Tahreer Logo"
                   className="h-24 w-auto"
                 />
-              </LocalizedClientLink>
 
             </LocalizedClientLink>
           </div>

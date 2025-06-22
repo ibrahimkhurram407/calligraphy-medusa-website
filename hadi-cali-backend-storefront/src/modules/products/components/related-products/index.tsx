@@ -8,6 +8,12 @@ type RelatedProductsProps = {
   countryCode: string
 }
 
+type CustomProductParams = HttpTypes.StoreProductParams & {
+  collection_id?: string[]
+  tag_id?: string[]
+  is_giftcard?: boolean
+}
+
 export default async function RelatedProducts({
   product,
   countryCode,
@@ -19,18 +25,20 @@ export default async function RelatedProducts({
   }
 
   // edit this function to define your related products logic
-  const queryParams: HttpTypes.StoreProductParams = {}
+  const queryParams: CustomProductParams = {}
+
   if (region?.id) {
     queryParams.region_id = region.id
   }
+
   if (product.collection_id) {
     queryParams.collection_id = [product.collection_id]
   }
+
   if (product.tags) {
-    queryParams.tag_id = product.tags
-      .map((t) => t.id)
-      .filter(Boolean) as string[]
+    queryParams.tag_id = product.tags.map((t) => t.id).filter(Boolean) as string[]
   }
+
   queryParams.is_giftcard = false
 
   const products = await listProducts({

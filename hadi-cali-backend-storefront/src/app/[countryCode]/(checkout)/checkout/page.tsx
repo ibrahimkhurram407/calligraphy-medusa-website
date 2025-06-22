@@ -3,7 +3,7 @@ import { retrieveCustomer } from "@lib/data/customer"
 import PaymentWrapper from "@modules/checkout/components/payment-wrapper"
 import CheckoutForm from "@modules/checkout/templates/checkout-form"
 import CheckoutSummary from "@modules/checkout/templates/checkout-summary"
-import EmailVerificationPage from "@modules/account/components/email_verification"
+import EmailVerificationPage from "@modules/account/components/email_verification/index"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
