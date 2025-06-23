@@ -19,7 +19,7 @@ export default async function AccountPageLayout({
     <AccountLayout customer={customer}>
       {customer ? customer.metadata?.email_verified ? dashboard : email_verification : login}
       <Toaster />
-      <TriggerCustomerUpdate customer={customer} />
+      {/* <TriggerCustomerUpdate customer={customer} /> */}
     </AccountLayout>
   )
 }
