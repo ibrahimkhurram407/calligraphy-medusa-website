@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const CustomOrderCTA = () => {
   return (
-    <div className="content-container py-16 text-center bg-ui-bg-subtle">
+    <div className="py-16 text-center bg-ui-bg-subtle">
       <Heading level="h2" className="text-xl mb-4">
         Want a Personalized Piece?
       </Heading>
