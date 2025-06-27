@@ -34,6 +34,21 @@ export default async function Footer() {
                 @tahreerpk
               </a>
             </div>
+
+            <div className="mt-4">
+              <span className="txt-small-plus txt-ui-fg-base block mb-1">
+                Follow us on Facebook
+              </span>
+              <a
+                href="https://www.facebook.com/share/1M1NQEMB46/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ui-fg-base underline"
+              >
+                facebook.com
+              </a>
+            </div>
+
           </div>
 
           {/* Categories */}
