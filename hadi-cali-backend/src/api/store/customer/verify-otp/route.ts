@@ -6,11 +6,14 @@ export const POST = async (req: MedusaRequest, res: MedusaResponse) => {
   const body = req.body as { id?: string; otp?: string }
 
   const customerId = body?.id
-  const otp = body?.otp
+  const otp = body?.otp;
+  console.log("test")
 
   if (!customerId || !otp) {
     return res.status(400).json({ message: "Missing id or otp" })
   }
+
+  // return res.status(200).json(customerId);
 
   try {
     const { result } = await verifyOtpWorkflow(req.scope).run({

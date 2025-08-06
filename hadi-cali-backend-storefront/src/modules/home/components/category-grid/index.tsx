@@ -3,8 +3,13 @@ import { Heading } from "@medusajs/ui"
 import Link from "next/link"
 
 const categories = [
-  { title: "Quranic Verses", href: "/categories/quranic-verses" },
-  { title: "Minimalist Arabic Designs", href: "/categories/minimal-calligraphy" }
+  { title: "Kalima & Tawheed", href: "/categories/kalima-&-tawheed" },
+  { title: "Surah & Ayat", href: "/categories/surah-ayat" },
+  { title: "Symbolic Forms", href: "/categories/symbolic-forms" },
+  { title: "Circular Calligraphy", href: "/categories/circular-calligraphy" },
+  { title: "Rectangular Calligraphy", href: "/categories/rectangular-calligraphy" },
+  { title: "Kufic Calligraphy", href: "/categories/kufic-calligraphy" },
+  { title: "Thuluth Calligraphy", href: "/categories/thuluth-calligraphy" }
 ]
 
 const CategoryGrid = () => {
