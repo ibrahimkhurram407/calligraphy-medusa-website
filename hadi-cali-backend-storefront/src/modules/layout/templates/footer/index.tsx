@@ -49,6 +49,35 @@ export default async function Footer() {
               </a>
             </div>
 
+            <div className="mt-4">
+              <span className="txt-small-plus txt-ui-fg-base block mb-1">
+                Follow us on YouTube
+              </span>
+              <a
+                href="https://www.youtube.com/@Tahreer.132"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ui-fg-base underline"
+              >
+                @Tahreer.132
+              </a>
+            </div>
+
+            <div className="mt-4">
+              <span className="txt-small-plus txt-ui-fg-base block mb-1">
+                Follow us on TikTok
+              </span>
+              <a
+                href="https://www.tiktok.com/@tahreer132"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-ui-fg-base underline"
+              >
+                @tahreer132
+              </a>
+            </div>
+
+
           </div>
 
           {/* Categories */}

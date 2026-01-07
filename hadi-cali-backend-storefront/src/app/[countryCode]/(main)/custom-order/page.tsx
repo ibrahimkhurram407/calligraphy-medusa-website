@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Button, Input, Textarea } from '@medusajs/ui'
 
-const BACKEND_URL = 'https://7205-2a02-4780-28-b9cc-00-1.ngrok-free.app'
+const BACKEND_URL = 'https://backend.tahreer.shop'
 const PUBLISHABLE_API_KEY = process.env.NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY
 
 const CustomOrderPage = () => {

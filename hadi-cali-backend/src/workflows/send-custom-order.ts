@@ -23,7 +23,7 @@ const sendCustomOrderEmailStep = createStep(
       secure: true,
       auth: {
         user: "care@tahreer.online", // Replace this
-        pass: 'y2UkMy674vy"',    // Replace this
+        pass: 'y2UkMy674vy',    // Replace this
       },
     })
 

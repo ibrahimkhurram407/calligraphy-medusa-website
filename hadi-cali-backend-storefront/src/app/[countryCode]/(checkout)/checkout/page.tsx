@@ -6,9 +6,15 @@ import CheckoutSummary from "@modules/checkout/templates/checkout-summary"
 import EmailVerificationPage from "@modules/account/components/email_verification/index"
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
+import LoginTemplate from "@modules/account/templates/login-template"
 
 export const metadata: Metadata = {
   title: "Checkout",
+}
+
+export enum LOGIN_VIEW {
+  SIGN_IN = "sign-in",
+  REGISTER = "register",
 }
 
 export default async function Checkout() {
@@ -29,9 +35,7 @@ export default async function Checkout() {
       ) : customer ? (
         <EmailVerificationPage customer={customer} />
       ) : (
-        <div className="text-red-500">
-          Failed to load customer data. Please refresh the page or try logging in again.
-        </div>
+        <LoginTemplate />
       )}
 
       <CheckoutSummary cart={cart} />

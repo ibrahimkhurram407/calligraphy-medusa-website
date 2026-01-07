@@ -24,13 +24,25 @@ export default function CheckoutLayout({
               Back
             </span>
           </LocalizedClientLink>
-          <LocalizedClientLink
+          {/* <LocalizedClientLink
             href="/"
             className="txt-compact-xlarge-plus text-ui-fg-subtle hover:text-ui-fg-base uppercase"
             data-testid="store-link"
           >
             Tahreer
-          </LocalizedClientLink>
+          </LocalizedClientLink> */}
+          <LocalizedClientLink
+              href="/"
+              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
+              data-testid="nav-store-link"
+            >
+                <img
+                  src="/icons/tahreer.png"
+                  alt="Tahreer Logo"
+                  className="h-24 w-auto"
+                />
+
+            </LocalizedClientLink>
           <div className="flex-1 basis-0" />
         </nav>
       </div>
